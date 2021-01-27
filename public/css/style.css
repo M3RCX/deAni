@@ -1,0 +1,93 @@
+@font-face {
+        font-family: nehad;
+        src: url(../assets/nehad/Nehad.ttf);
+}
+
+body{
+    background-color: black;
+}
+
+
+.bg{
+    width: 50%;
+    animation: fade-bg 3s;
+    margin-left: 25%;
+    
+    
+}
+@keyframes fade-bg{
+    from {opacity: 0;
+        transform: translateY(-150px);
+    }
+    to {opacity: 1;
+        transform: translateY( 0px);
+    }
+}
+
+
+
+
+.text{
+    
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 132px;
+    color: #F29829;
+    font-family: nehad;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+   
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    
+    animation: 
+    typing  4s   infinite steps(300),
+    blink-caret 5s;
+    
+}
+@keyframes typing {
+    from { 
+        width: 0;
+        opacity: 0; 
+    }
+    to { 
+        width: 100%;
+        opacity: 1; 
+    }
+  }
+
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
+
+
+@keyframes fade{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@media screen and (min-width:200px) and (max-width: 500px) { 
+    .bg{
+        margin-top: 80px;
+        width: 80%;
+        margin-left: 8%;
+    }
+    .text{
+        font-size: 52px;
+        margin-top: 50px;    
+    }
+}
+
+@media (min-width: 501px) and (max-width: 900px) { 
+    .bg{
+        
+        width: 80%;
+        margin-left: 8%;
+    }
+    .text{
+        font-size: 102px;
+        margin-top: 50px; 
+    }
+}
+
